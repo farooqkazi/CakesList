@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_cake_list">
+    <fragment
+        android:id="@+id/fragment_cake_list"
+        android:name="com.assignment.cakeslist.presentation.cakelist.CakeListFragment"
+        android:label="Cakes"
+        tools:layout="@layout/fragment_cake_list">
+        <action
+            android:id="@+id/action_cake_list_to_detail"
+            app:destination="@id/fragment_cake_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_cake_detail"
+        android:name="com.assignment.cakeslist.presentation.cakedetail.CakeDetailFragment"
+        android:label="Cake Detail"
+        tools:layout="@layout/fragment_cake_detail">
+
+        <argument
+            android:name="cake"
+            app:argType="com.assignment.cakeslist.data.entity.Cake" />
+    </fragment>
+
+
+</navigation>
