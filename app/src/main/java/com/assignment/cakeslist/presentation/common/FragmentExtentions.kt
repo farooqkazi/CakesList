@@ -1,7 +1,6 @@
 package com.assignment.cakeslist.presentation.common
 
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
@@ -44,19 +43,12 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
 
 }
 
-fun Fragment.toast(msg: String?) {
-    activity?.let {
-        Toast.makeText(it, msg ?: "Unknown error!", Toast.LENGTH_SHORT).show()
-    }
-
-}
-
 fun Fragment.snackRetry(
     msg: String,
     rootView: View = requireActivity().findViewById(android.R.id.content),
-    blk: () -> Unit
+    callback: () -> Unit
 ) {
     val snackbar =
-        Snackbar.make(rootView, msg, Snackbar.LENGTH_SHORT).setAction("Retry") { blk.invoke() }
+        Snackbar.make(rootView, msg, Snackbar.LENGTH_SHORT).setAction("Retry") { callback.invoke() }
     snackbar.show()
 }

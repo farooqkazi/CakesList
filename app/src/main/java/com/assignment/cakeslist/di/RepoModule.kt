@@ -12,5 +12,5 @@ import dagger.hilt.components.SingletonComponent
 abstract class RepoModule {
 
     @Binds
-    abstract fun provideDepartmentRepository(cakeRepositoryImpl: CakeRepositoryImpl): CakeRepository
+    abstract fun provideCakeRepository(cakeRepositoryImpl: CakeRepositoryImpl): CakeRepository
 }

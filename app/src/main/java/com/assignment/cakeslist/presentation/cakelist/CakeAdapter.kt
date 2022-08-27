@@ -11,7 +11,7 @@ import com.assignment.cakeslist.databinding.CakeItemLayoutBinding
 import com.bumptech.glide.Glide
 
 
-class CakeAdapter(private val onClickClb: (Cake) -> Unit) :
+class CakeAdapter(private val onClickCallback: (Cake) -> Unit) :
     ListAdapter<Cake, CakeAdapter.VH>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = VH.create(parent)
@@ -20,7 +20,7 @@ class CakeAdapter(private val onClickClb: (Cake) -> Unit) :
         val cake = getItem(position)
         holder.bind(cake)
         holder.itemView.setOnClickListener {
-            onClickClb.invoke(cake)
+            onClickCallback.invoke(cake)
         }
     }
 

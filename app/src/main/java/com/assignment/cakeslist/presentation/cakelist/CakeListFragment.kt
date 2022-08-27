@@ -25,6 +25,7 @@ class CakeListFragment : Fragment(R.layout.fragment_cake_list), (Cake) -> Unit,
     private val binding by viewBinding<FragmentCakeListBinding>()
     private val viewModel by viewModels<CakeListViewModel>()
     private lateinit var adapter: CakeAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         adapter = CakeAdapter(this)
@@ -32,13 +33,16 @@ class CakeListFragment : Fragment(R.layout.fragment_cake_list), (Cake) -> Unit,
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.recyclerView.adapter = adapter
         val dividerItemDecoration =
             DividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL)
-        binding.recyclerView.addItemDecoration(dividerItemDecoration)
-        binding.recyclerView.setHasFixedSize(true)
-        binding.swipeRefreshLayout.setOnRefreshListener {
-            viewModel.loadCakes()
+
+        with(binding) {
+            recyclerView.adapter = adapter
+            recyclerView.addItemDecoration(dividerItemDecoration)
+            recyclerView.setHasFixedSize(true)
+            swipeRefreshLayout.setOnRefreshListener {
+                viewModel.loadCakes()
+            }
         }
         observeUIState()
     }
@@ -54,7 +58,7 @@ class CakeListFragment : Fragment(R.layout.fragment_cake_list), (Cake) -> Unit,
                 if (adapter.itemCount > 0) {
                     snackRetry(
                         "No Internet connection! Please try again.",
-                        blk = viewModel::loadCakes
+                        callback = viewModel::loadCakes
                     )
                 } else {
                     showNetworkError(viewModel::loadCakes)
