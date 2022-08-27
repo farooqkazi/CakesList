@@ -47,7 +47,7 @@ class CakeListFragment : Fragment(R.layout.fragment_cake_list), (Cake) -> Unit,
         viewModel.uiState.flowWithLifecycle(lifecycle).collect(::updateUI)
     }
 
-    fun updateUI(uiState: CakeListViewModel.UiState) {
+    private fun updateUI(uiState: CakeListViewModel.UiState) {
         when (uiState) {
             is CakeListViewModel.UiState.Error -> {
                 binding.swipeRefreshLayout.isRefreshing = false

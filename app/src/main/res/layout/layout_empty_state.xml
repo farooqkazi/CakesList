@@ -17,20 +17,20 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="No Internet Image"
+            android:contentDescription="@string/no_internet_image"
             android:src="@drawable/image_no_internet" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Some thing went wrong!"
+            android:text="@string/some_thing_went_wrong"
             android:textAppearance="@style/TextAppearance.AppCompat.Title" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="No Internet! Check your connection and try again"
+            android:text="@string/no_internet_check_your_connection_and_try_again"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Retry" />
+            android:text="@string/retry" />
     </LinearLayout>
 
     <LinearLayout
@@ -55,7 +55,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="Image No Data"
+            android:contentDescription="@string/image_no_data"
             android:src="@drawable/image_empty_state" />
 
         <TextView
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="No Cakes"
+            android:text="@string/no_cakes"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 

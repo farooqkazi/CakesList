@@ -1,4 +1,4 @@
-package com.assignment.cakeslist.data.cake
+package com.assignment.cakeslist.data.repository
 
 import com.assignment.cakeslist.data.CakesApi
 import com.assignment.cakeslist.data.entity.Cake

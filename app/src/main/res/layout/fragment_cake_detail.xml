@@ -42,7 +42,7 @@
             tools:text="Bugs Bunny's favourite" />
 
         <TextView
-            android:id="@+id/text_descriptions"
+            android:id="@+id/text_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"

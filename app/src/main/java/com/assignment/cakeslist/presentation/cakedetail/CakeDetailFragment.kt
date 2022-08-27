@@ -40,6 +40,6 @@ class CakeDetailFragment : Fragment(R.layout.fragment_cake_detail) {
             .into(binding.thumbnail)
         binding.textTitle.text = cake.title
         binding.toolbar.title = cake.title
-        binding.textDescriptions.text = cake.desc
+        binding.textDescription.text = cake.desc
     }
 }
