@@ -15,7 +15,6 @@ Build System : [Gradle](https://gradle.org/)
 - [Libraries](#libraries)
 - [Solution](#solution)
 - [Testing](#testing)
-- [Further Improvements](#improvements)
 
 
 ## Architecture
@@ -54,7 +53,7 @@ Some of the libraries used in the application are:
     - [Viewmodel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Manage UI related data in a lifecycle conscious way
       and act as a channel between use cases and UI.
     - [Data Binding](https://developer.android.com/topic/libraries/data-binding) - support library that allows binding of UI components in layouts to data sources.
-    - [Navigation]("https://developer.android.com/guide/navigation/navigation-getting-started)
+    - [Navigation](https://developer.android.com/guide/navigation/navigation-getting-started)
 - [Retrofit](https://square.github.io/retrofit/) - type safe http client and supports coroutines out of the box and default parameters.
 - [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - Library Support for coroutines. I used this for asynchronous programming in order
   to obtain data from the network.
@@ -74,12 +73,4 @@ In general, any particular flow can be said to follow the steps below:
 - Finally, the ViewModel creates a view to model the state of the view and hand it over the view.
 
 ## Testing
-
-
-
-## Further Improvements
-
-
-
-
-
+ViewModel tests have been handled, with help of TestDataCakeRepo.
