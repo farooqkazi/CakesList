@@ -30,9 +30,8 @@ The Application is split into a three layer architecture:
 - Presentation
 
 #### Data
-The data layer handles the business logic and provides data from the
-Dog Ceo API. This layer uses the Repository pattern to fetch data from the data source which in
-this case is the Waracle API.
+The data layer handles the business logic and provides data from the API. 
+This layer uses the Repository pattern to fetch data from the data source which in this case is the Waracle API.
 
 #### Domain
 The domain layer contains the application specifics logic. It contains
